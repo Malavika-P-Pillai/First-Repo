@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form id="form1">
+    num1
+    <input id="num1">
+    <br>
+    num2
+    <input id="num2">
+
+</form>
+
+<button onclick="sum()">+</button>
+<button onclick="diff()">-</button>
+<button onclick="mult()">*</button>
+<button onclick="divi()">/</button>
+result:<p id="result"></p>
+
+<script>
+    in1 = document.getElementById("num1");
+    in2 = document.getElementById("num2");
+
+    function sum(){
+
+
+        var x = parseInt(in1.value);
+        var y =  parseInt(in2.value);
+
+        document.getElementById("result").innerHTML = x+y;
+
+    }
+    function diff(){
+        var x = parseInt(in1.value);
+        var y =  parseInt(in2.value);
+
+        document.getElementById("result").innerHTML = x-y;
+    }
+    function mult(){
+    var x = parseInt(in1.value);
+        var y =  parseInt(in2.value);
+    document.getElementById("result").innerHTML = x*y;
+    }
+    function divi(){
+    var x = parseInt(in1.value);
+        var y =  parseInt(in2.value);
+    document.getElementById("result").innerHTML = x/y;
+    }
+
+</script>
+</body>
+</html>
+
+
+
+function num(a){
+
+    document.getElementById("display").innerHTML = document.getElementById("display").innerHTML+ a;
+    num1=num1+a;
+    }
+
+
+    in1 = document.getElementById("num1");
+    in2 = document.getElementById("num2");
+
+    function sum(){
+
+
+        var x = parseInt(in1.value);
+        var y =  parseInt(in2.value);
+
+        document.getElementById("result").innerHTML = x+y;
+
+    }
+    function diff(){
+        var x = parseInt(in1.value);
+        var y =  parseInt(in2.value);
+
+        document.getElementById("result").innerHTML = x-y;
+    }
+    function mult(){
+    var x = parseInt(in1.value);
+        var y =  parseInt(in2.value);
+    document.getElementById("result").innerHTML = x*y;
+    }
+    function divi(){
+    var x = parseInt(in1.value);
+        var y =  parseInt(in2.value);
+    document.getElementById("result").innerHTML = x/y;

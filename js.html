@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js</title>
+</head>
+<body>
+    <div class="red" id="box">
+        <button onclick="change()">change</button>
+    </div>
+    <script>
+        function change() {
+            p = document.getElementById('box');
+            p.className = 'yellow';
+            p.style.height = "200px";
+            p.style.width = "200px";
+            p.style.borderRadius = "200px";
+        }
+    </script>
+
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+        }
+        .red{
+             background-color: red;
+        }
+        .yellow{
+             background-color: yellow;
+        }
+
+    </style>
+
+
+</body>
+</html>

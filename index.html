@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAL</title>
+</head>
+<body>
+<center>
+<div id="box">
+    <div id="display">
+
+    </div>
+    <button id="btn" onclick="num(0)">0</button>
+    <button id="btn" onclick="num(1)">1</button>
+    <button id="btn" onclick="operator('+')">+</button>
+    <br>
+    <button id="btn" onclick="num(2)">2</button>
+    <button id="btn" onclick="num(3)">3</button>
+    <button id="btn" onclick="operator('-')">-</button>
+    <br>
+    <button id="btn" onclick="num(4)">4</button>
+    <button id="btn" onclick="num(5)">5</button>
+    <button id="btn" onclick="operator('*')">*</button>
+    <br>
+    <button id="btn" onclick="num(6)">6</button>
+    <button id="btn" onclick="num(7)">7</button>
+    <button id="btn" onclick="operator('/')">/</button>
+    <br>
+    <button id="btn" onclick="num(8)">8</button>
+    <button id="btn" onclick="num(9)">9</button>
+    <button id="btn" onclick="result()">=</button>
+</div>
+    <button id="btn" onclick="clear()">C</button>
+</center>
+    <!--result:<p id="result"></p>-->
+
+<style>
+    #display
+    {
+        padding-top:5px;
+        height:40px;
+        width:130px;
+        border: 1px solid black ;
+    }
+    #box
+    {
+        padding-top:10px;
+        width:150px;
+        height:300px;
+
+        margin-top:190px;
+        border: 1px solid black ;
+    }
+    #btn
+    {
+        margin-top:10px;
+        width:40px;
+        height:40px;
+        font-size:20px;
+    }
+</style>
+
+
+
+<script>
+    var num1='';
+    var num2='';
+    var o='';
+
+    function clear()
+    {
+        var num1='';
+        var num2='';
+        var o='';
+        disp('');
+    }
+    function disp(s)
+    {
+        document.getElementById("display").innerHTML = s;
+    }
+    function num(a){
+    if(o ==='')
+    {
+        num1=num1+a;
+        disp(num1);
+    }
+    else{
+        num2=num2+a;
+        disp(num1 + o+ num2);
+
+    }
+    }
+
+
+    function operator(opr){
+    disp(num1+ opr);
+    o=opr;
+    }
+
+
+
+    function result(){
+
+    var x = parseInt(num1);
+    var y =  parseInt(num2);
+    var res;
+    if(o==='+')
+    {
+        res=x+y;
+        disp(res);
+    }
+    else if(o==='-')
+    {
+        res=x-y;
+        disp(res);
+    }
+    else if(o==='*')
+    {
+        res=x*y;
+        disp(res);
+    }
+    else if(o==='/')
+    {
+        res=x/y;
+        disp(res);
+    }
+    num1=res;
+    num2='';
+   }
+
+</script>
+</body>
+</html>
